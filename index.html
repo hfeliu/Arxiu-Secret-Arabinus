@@ -141,7 +141,7 @@
 
   <script>
     const answers = {
-      q1: "leg avg",
+      q1: ["leg avg", "legavg"],
       q2: "optimae",
       q3: "statvam",
       q4: "pio",
@@ -158,7 +158,9 @@
       ids.forEach(id => {
         const input = document.getElementById(id);
         const err = document.getElementById('err' + id.slice(1));
-        if (normalize(input.value) === normalize(answers[id])) {
+        if (Array.isArray(answers[id])
+          ? answers[id].some(a => normalize(a) === normalize(input.value))
+          : normalize(answers[id]) === normalize(input.value)) {
           input.className = 'correct';
           err.className = 'error-msg';
         } else {
