@@ -79,7 +79,7 @@
     <div id="section1" class="section active">
       <h1>L'Arxiu secret d'Arabinus</h1>
       <h2>Verificació d'expedients</h2>
-      <p class="subtitle">Respon les 6 preguntes. Les respostes no distingeixen entre majúscules i minúscules, però sí entre u i v.</p>
+      <p class="subtitle">Respon les 6 preguntes. El camp de respostes no distingeix entre majúscules i minúscules.</p>
 
       <div class="question-block">
         <span class="q-label">Expedient I. Quin càrrec exercia Lucius Tadius?</span>
@@ -143,11 +143,11 @@
     const answers = {
       q1: ["leg avg", "legavg"],
       q2: "optimae",
-      q3: "statvam",
+      q3: ["statvam", "statuam"],
       q4: "pio",
-      q5: "myrismvs",
+      q5: ["myrismvs", "myrismus"],
       q6: "amico",
-      q7: "atrivm"
+      q7: ["atrivm", "atrium"]
     };
 
     function normalize(v) { return v.trim().toLowerCase(); }
